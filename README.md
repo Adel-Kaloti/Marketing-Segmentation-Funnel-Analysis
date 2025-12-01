@@ -180,6 +180,14 @@ To enhance the analytical depth of the project, several calculated metrics were 
 
 <img width="2066" height="826" alt="image" src="https://github.com/user-attachments/assets/9326fea0-8623-41ee-9119-9e52720ad6f5" />
 
+<p align="center">
+  <a href="EDA_SQL.txt">
+    <img src="https://img.shields.io/badge/View%20 View 🔍 Exploratory Data Analysis with SQL %20File-ff9933?style=for-the-badge&logo=database&logoColor=white" />
+  </a>
+  </p>
+
+
+
 -----
 
  <tr>
@@ -189,14 +197,13 @@ To enhance the analytical depth of the project, several calculated metrics were 
 Documenting the dimensions ensures a clear understanding of each campaign’s attributes—such as company, campaign type, target audience, channel, language, location, and duration. This validation step is essential before moving into performance analysis and KPI modeling.
 
 
-     
+<p align="center">
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/775f688e-a8c4-42c2-ab4b-b8ba10e66a58" />
-
+  </p>
+  
   </p>
 
   </tr>
-
-
 
 
 
