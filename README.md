@@ -78,84 +78,123 @@ This structure makes analysis faster, cleaner, and BI-ready.
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/b1364cf1-7ff4-402b-81ca-adac9c68101b" />
   </p>
 
-  
 -----
 
- <tr>
-    <h1 align="center">Data Dimentions</h1>
-   <p align="center">
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/775f688e-a8c4-42c2-ab4b-b8ba10e66a58" />
+<h1 align="center">📊 Project Measures, KPIs & Calculated Fields</h1>
+<hr>
 
-  </p>
-
-  </tr>
-
------
-
- <tr>
-    <h1 align="center"> Project Measures &  KPIs </h1>
-
-  </tr>
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <!-- LEFT COLUMN -->
+    <td width="50%" valign="top" style="padding-right:20px;">
 
   <h2>📌 Clicks</h2>
-  <p>
-  - Number of times users clicked on the ad.<br>
-  - A direct indicator of how attractive and engaging the campaign content is.
-  </p>
+  <ul>
+    <li>Number of times users clicked on the ad.</li>
+    <li>A direct indicator of how attractive and engaging the campaign content is.</li>
+  </ul>
   <hr>
 
   <h2>📌 Impressions</h2>
-  <p>
-  - Total number of times the ad was displayed to users.<br>
-  - Reflects the campaign’s overall reach and visibility.
-  </p>
+  <ul>
+    <li>Total number of times the ad was displayed to users.</li>
+    <li>Reflects the campaign’s overall reach and visibility.</li>
+  </ul>
   <hr>
 
   <h2>📌 Engagement_Score</h2>
-  <p>
-  - A quality interaction score (0–10) representing how strongly users engaged 
-  with the campaign (likes, comments, shares, video views, etc.).
-  </p>
+  <ul>
+    <li>A quality interaction score (0–10) representing how strongly users engaged with the campaign.</li>
+  </ul>
+  <hr>
+
+  <h2>📌 Calculated Field: CTR</h2>
+  <pre><code>CTR = Clicks / Impressions</code></pre>
+  <ul>
+    <li>Measures how often people click after seeing an ad.</li>
+    <li>Primary indicator of ad attractiveness.</li>
+  </ul>
+
+   <h2>📌 Calculated Field: Conversion Count</h2>
+  <pre><code>Conversions = Clicks * Conversion_Rate</code></pre>
+  <ul>
+    <li>Total number of successful conversions.</li>
+    <li>Key metric for funnel analysis.</li>
+  </ul>
   <hr>
 
 </td>
 
-<td width="50%" valign="top">
+<!-- RIGHT COLUMN -->
+<td width="50%" valign="top" style="padding-left:20px;">
 
   <h2>📌 Conversion_Rate</h2>
-  <p>
-  - The percentage of users who completed a desired action 
-  (purchase, signup, download) after clicking the ad.<br>
-  - A core metric for evaluating campaign effectiveness.
-  </p>
+  <ul>
+    <li>Percentage of users who completed a desired action after clicking.</li>
+    <li>A core metric for evaluating campaign effectiveness.</li>
+  </ul>
   <hr>
 
   <h2>📌 Acquisition_Cost</h2>
-  <p>
-  - The total advertising spend for the campaign.<br>
-  - Essential for calculating CAC, CPA, and ROI.
-  </p>
+  <ul>
+    <li>Total advertising spend for the campaign.</li>
+    <li>Essential for calculating CAC, CPA, and ROI.</li>
+  </ul>
   <hr>
 
   <h2>📌 ROI</h2>
-  <p>
-  - Return on Investment — measures how much revenue or value is generated 
-  for every dollar spent. Higher ROI = more profitable campaign.
-  </p>
+  <ul>
+    <li>Return on Investment — measures value generated per dollar spent.</li>
+    <li>Higher ROI = more profitable campaign.</li>
+  </ul>
+  <hr>
+
+  <h2>📌 Calculated Field: CPA</h2>
+  <pre><code>CPA = Acquisition_Cost / (Clicks * Conversion_Rate)</code></pre>
+  <ul>
+    <li>Cost paid per successful conversion.</li>
+    <li>Used to optimize budget allocation.</li>
+  </ul>
+  <hr>
+
+  <h2>📌 Calculated Field: Engagement Rate</h2>
+  <pre><code>Engagement Rate = Engagement_Score / Impressions</code></pre>
+  <ul>
+    <li>Shows how engaging the content is relative to its reach.</li>
+  </ul>
+  <hr>
+
+ 
 
 </td>
   </tr>
 </table>
 
 
+-----
+  <h1 align="center">📐 Calculated Fields Overview  </h1>
+
+To enhance the analytical depth of the project, several calculated metrics were created directly in SQL, These fields (CTR, CPA, Conversion Count, Engagement Rate) provide essential visibility into campaign efficiency, cost-effectiveness, and user behavior.  
+**They will later be used in Tableau to support data-driven insights and performance comparisons across campaigns.**
 
 
+<img width="2066" height="826" alt="image" src="https://github.com/user-attachments/assets/9326fea0-8623-41ee-9119-9e52720ad6f5" />
+
+-----
+
+ <tr>
+    <h1 align="center">Data Dimentions</h1>
+   <p align="center">
+
+Documenting the dimensions ensures a clear understanding of each campaign’s attributes—such as company, campaign type, target audience, channel, language, location, and duration. This validation step is essential before moving into performance analysis and KPI modeling.
 
 
+     
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/775f688e-a8c4-42c2-ab4b-b8ba10e66a58" />
 
+  </p>
+
+  </tr>
 
 
 
