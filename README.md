@@ -182,7 +182,7 @@ To enhance the analytical depth of the project, several calculated metrics were 
 
 <p align="center">
   <a href="EDA_SQL.txt">
-    <img src="https://img.shields.io/badge/View%20 View 🔍 Exploratory Data Analysis with SQL %20File-ff9933?style=for-the-badge&logo=database&logoColor=white" />
+    <img src="https://img.shields.io/badge/View Full 🔍 Exploratory Data Analysis with SQL %20File-ff9933?style=for-the-badge&logo=database&logoColor=white" />
   </a>
   </p>
 
