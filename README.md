@@ -11,7 +11,7 @@ Data-driven marketing project analyzing campaign performance, audience segments,
 This project focuses on answering the most important marketing performance questions:
 
 1. **Which campaigns deliver the highest performance?**  
-   (Clicks, Conversion Rate, ROI, Engagement)
+   KPIs (Clicks, Conversion Rate, ROI, Engagement)
 
 2. **Which marketing channels are the most effective?**  
    (YouTube, Google Ads, Instagram, etc.)
