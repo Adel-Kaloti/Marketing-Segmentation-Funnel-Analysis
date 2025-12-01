@@ -56,8 +56,8 @@ This ensures maximum impact with limited funds.
 
 
 -----
+###   <h1 align="center">🎯 Data Structure & ERD</h1> 
 
-### Data Modeling Highlight
 To improve data quality, performance, and analytical flexibility, the original Raw_Data table was normalized and split into three separate tables:
 - **dim_campaign** – campaign attributes  
 - **dim_date** – full date intelligence  
