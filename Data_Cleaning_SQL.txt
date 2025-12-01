@@ -1,0 +1,101 @@
+
+---- Clean Acquisition_Cost Column and remove $ mark
+
+INSERT INTO dbo.fact_campaign_performance
+(
+    Campaign_Key,
+    DateKey,
+    Clicks,
+    Impressions,
+    Engagement_Score,
+    Conversion_Rate,
+    Acquisition_Cost,
+    ROI
+)
+SELECT
+    C.Campaign_Key,
+    D.DateKey,
+    R.Clicks,
+    R.Impressions,
+    R.Engagement_Score,
+    R.Conversion_Rate,
+    TRY_CAST(
+        REPLACE(
+            REPLACE(R.Acquisition_Cost, '$', ''),
+        ',', '') AS DECIMAL(18,2)
+    ) AS Acquisition_Cost,
+    R.ROI
+FROM dbo.Raw_Data R
+JOIN dbo.dim_campaign C
+    ON R.Campaign_ID = C.Campaign_ID
+JOIN dbo.dim_date D
+    ON D.FullDate = R.Date;
+-----------------------------------------------------
+
+--logical test 
+
+SELECT TOP 20 *
+FROM fact_campaign_performance
+WHERE Clicks > Impressions;
+
+SELECT TOP 20 *
+FROM fact_campaign_performance
+WHERE Conversion_Rate < 0 OR Conversion_Rate > 1;
+
+
+
+----------------------------------------------------------------------
+
+ALTER TABLE dbo.Raw_Data ALTER COLUMN Duration INT;
+ALTER TABLE dbo.Raw_Data ALTER COLUMN Acquisition_Cost DECIMAL(18,2);
+ALTER TABLE dbo.Raw_Data ALTER COLUMN Conversion_Rate FLOAT;
+ALTER TABLE dbo.Raw_Data ALTER COLUMN ROI FLOAT;
+
+
+--------------------------------------------
+
+DELETE FROM dbo.Raw_Data
+WHERE Campaign_ID IS NULL
+  OR Date IS NULL
+  OR Company IS NULL;
+
+--------------------------------------
+
+SELECT 
+    SUM(CASE WHEN Clicks IS NULL THEN 1 ELSE 0 END) AS Null_Clicks,
+    SUM(CASE WHEN Impressions IS NULL THEN 1 ELSE 0 END) AS Null_Impressions,
+    SUM(CASE WHEN ROI IS NULL THEN 1 ELSE 0 END) AS Null_ROI
+FROM dbo.Raw_Data;
+
+
+
+-------------------------------------------
+
+
+SELECT 
+    Campaign_ID,
+    Company,
+    Campaign_Type,
+    Target_Audience,
+    CAST(Duration AS INT) AS Duration_Days,
+    Channel_Used,
+    CAST(Conversion_Rate AS FLOAT) AS Conversion_Rate,
+    CAST(REPLACE(REPLACE(Acquisition_Cost, '$',''), ',', '') AS DECIMAL(18,2)) AS Acquisition_Cost,
+    CAST(ROI AS FLOAT) AS ROI,
+    Location,
+    Language,
+    Clicks,
+    Impressions,
+    Engagement_Score,
+    Customer_Segment,
+    CAST(Date AS DATE) AS Date
+INTO dbo.Clean_Marketing_Data
+FROM dbo.Raw_Data
+WHERE Campaign_ID IS NOT NULL;
+
+------------------------------------
+UPDATE dbo.Raw_Data
+SET Acquisition_Cost =
+    REPLACE(REPLACE(REPLACE(Acquisition_Cost, '$', ''), ',', ''), ' ', '');
+
+
