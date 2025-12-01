@@ -1,13 +1,11 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2b8507ec-45f5-4611-b6ba-9ffebcee1960" width="200" />
+  <img src="https://github.com/user-attachments/assets/7e22a616-a356-441d-9364-85d03d0ac62f" width="200" />
 </p>
 
 ###   <h1 align="center">Marketing Segmentation & Funnel Analysis</h1>   
 Data-driven marketing project analyzing campaign performance, audience segments, and funnel KPIs using SQL Server &amp; Tableau.
 
 <img width="1402" height="936" alt="image" src="https://github.com/user-attachments/assets/2923cdb4-8fb9-4bae-a77e-9d352a64b212" />
-
-
 
 
 -----
