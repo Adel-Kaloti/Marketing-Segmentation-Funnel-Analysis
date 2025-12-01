@@ -54,7 +54,7 @@ This ensures maximum impact with limited funds.
 
 
 -----
-###   <h1 align="center">🎯 Data Structure & ERD</h1> 
+###   <h1 align="center"> Data Structure & ERD</h1> 
 
 To improve data quality, performance, and analytical flexibility, the original Raw_Data table was normalized and split into three separate tables:
 - **dim_campaign** – campaign attributes  
@@ -90,8 +90,78 @@ This structure makes analysis faster, cleaner, and BI-ready.
 
   </tr>
 
+-----
+
+ <tr>
+    <h1 align="center"> Project Measures &  KPIs </h1>
+
+  </tr>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+
+  <h2>📌 Clicks</h2>
+  <p>
+  - Number of times users clicked on the ad.<br>
+  - A direct indicator of how attractive and engaging the campaign content is.
+  </p>
+  <hr>
+
+  <h2>📌 Impressions</h2>
+  <p>
+  - Total number of times the ad was displayed to users.<br>
+  - Reflects the campaign’s overall reach and visibility.
+  </p>
+  <hr>
+
+  <h2>📌 Engagement_Score</h2>
+  <p>
+  - A quality interaction score (0–10) representing how strongly users engaged 
+  with the campaign (likes, comments, shares, video views, etc.).
+  </p>
+  <hr>
+
+</td>
+
+<td width="50%" valign="top">
+
+  <h2>📌 Conversion_Rate</h2>
+  <p>
+  - The percentage of users who completed a desired action 
+  (purchase, signup, download) after clicking the ad.<br>
+  - A core metric for evaluating campaign effectiveness.
+  </p>
+  <hr>
+
+  <h2>📌 Acquisition_Cost</h2>
+  <p>
+  - The total advertising spend for the campaign.<br>
+  - Essential for calculating CAC, CPA, and ROI.
+  </p>
+  <hr>
+
+  <h2>📌 ROI</h2>
+  <p>
+  - Return on Investment — measures how much revenue or value is generated 
+  for every dollar spent. Higher ROI = more profitable campaign.
+  </p>
+
+</td>
+  </tr>
+</table>
 
 
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
