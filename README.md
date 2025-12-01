@@ -1,31 +1,58 @@
-# Marketing-Segmentation-Funnel-Analysis
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2b8507ec-45f5-4611-b6ba-9ffebcee1960" width="200" />
+</p>
+
+###   <h1 align="center">Marketing Segmentation & Funnel Analysis</h1>   
 Data-driven marketing project analyzing campaign performance, audience segments, and funnel KPIs using SQL Server &amp; Tableau.
 
 <img width="1402" height="936" alt="image" src="https://github.com/user-attachments/assets/2923cdb4-8fb9-4bae-a77e-9d352a64b212" />
 
 
 
+
 -----
 
 ###   <h1 align="center">🎯 Main Business Questions & KPIs</h1> 
-This project focuses on answering the most important marketing performance questions:
+This project focuses on answering 4 important campaigns performance questions:
 
-1. **Which campaigns deliver the highest performance?**  
-   KPIs (Clicks, Conversion Rate, ROI, Engagement)
+### 1️⃣ Which target audiences deliver the best performance across campaigns?
+Identify which **Target_Audience** (like .. *Women 35–44, Men 25–34, All Ages*) achieves the best mix of:
+- **High CTR**, **High Conversion Rate**, **Low CAC**, **High ROI**
 
-2. **Which marketing channels are the most effective?**  
-   (YouTube, Google Ads, Instagram, etc.)
+Understanding this helps optimize audience targeting and improve overall campaign profitability.
 
-3. **How does performance differ by target audience?**  
-   (Demographics, segments, behavior)
+---
 
-4. **How does campaign performance vary across locations?**  
-   (Cities, customer markets)
+### 2️⃣ How does performance change across channels for each target audience?
+Analyze how the same **Target_Audience** performs across different channels  
+(*Google Ads, Facebook, Instagram, YouTube, Email*):
+- Which channels require **more budget**?
+- Which channels should have spending **reduced or stopped** based on low ROI?
+- Which audience × channel combination brings the highest engagement?
 
-5. **What is the impact of campaign duration on performance?**
+---
 
-6. **What is the overall global performance of all marketing campaigns?**  
-   (Total clicks, impressions, spend, CTR, conversion)
+### 3️⃣ Where do we lose potential customers in the marketing funnel?
+Evaluate the drop-off across the funnel:  **Impressions → Clicks → Conversions**
+
+Key goals:
+- Identify **which stage has the highest drop rate**
+- Compare funnel performance across different **audience segments**
+- Detect segments with unusually strong or weak conversion paths
+
+---
+
+### 4️⃣ What data-driven recommendations can optimize budget allocation?
+If the company operates with a fixed marketing budget, we determine how to **redistribute spend** across:
+- **Target_Audience**, **Channel**
+
+To: - Reduce **CAC**
+    - Increase **ROI**
+    - Focus spending on the **highest-value segments**
+
+This ensures maximum impact with limited funds.
+
+
 
 
 -----
