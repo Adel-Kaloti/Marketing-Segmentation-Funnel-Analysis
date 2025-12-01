@@ -1,0 +1,85 @@
+
+
+
+CREATE TABLE dim_campaign (
+    Campaign_Key INT IDENTITY(1,1) PRIMARY KEY,
+    Campaign_ID INT,
+    Company NVARCHAR(100),
+    Campaign_Type NVARCHAR(50),
+    Target_Audience NVARCHAR(50),
+    Duration_Days INT,
+    Channel_Used NVARCHAR(50),
+    Location NVARCHAR(50),
+    Language NVARCHAR(50),
+    Customer_Segment NVARCHAR(50)
+);
+
+
+
+CREATE TABLE dim_date (
+    DateKey INT PRIMARY KEY,
+    FullDate DATE,
+    DayNum TINYINT,
+    MonthNum TINYINT,
+    MonthName NVARCHAR(20),
+    YearNum SMALLINT,
+    QuarterNum TINYINT,
+    DayOfWeekNum TINYINT,
+    DayName NVARCHAR(20)
+);
+
+
+CREATE TABLE dbo.fact_campaign_performance (
+    FactID INT IDENTITY(1,1) PRIMARY KEY,
+
+    -- Foreign Keys
+    Campaign_Key INT NOT NULL,
+    DateKey INT NOT NULL,
+
+    -- Measures
+    Clicks INT,
+    Impressions INT,
+    Engagement_Score TINYINT,
+    Conversion_Rate FLOAT,
+    Acquisition_Cost DECIMAL(18,2),
+    ROI FLOAT,
+
+    -- FK constraints
+    FOREIGN KEY (Campaign_Key) REFERENCES dbo.dim_campaign(Campaign_Key),
+    FOREIGN KEY (DateKey) REFERENCES dbo.dim_date(DateKey)
+);
+
+
+
+---- Clean Acquisition_Cost Column and remove $ mark
+
+INSERT INTO dbo.fact_campaign_performance
+(
+    Campaign_Key,
+    DateKey,
+    Clicks,
+    Impressions,
+    Engagement_Score,
+    Conversion_Rate,
+    Acquisition_Cost,
+    ROI
+)
+SELECT
+    C.Campaign_Key,
+    D.DateKey,
+    R.Clicks,
+    R.Impressions,
+    R.Engagement_Score,
+    R.Conversion_Rate,
+    TRY_CAST(
+        REPLACE(
+            REPLACE(R.Acquisition_Cost, '$', ''),
+        ',', '') AS DECIMAL(18,2)
+    ) AS Acquisition_Cost,
+    R.ROI
+FROM dbo.Raw_Data R
+JOIN dbo.dim_campaign C
+    ON R.Campaign_ID = C.Campaign_ID
+JOIN dbo.dim_date D
+    ON D.FullDate = R.Date;
+
