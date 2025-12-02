@@ -1,0 +1,156 @@
+--Calculate Rank campaigns by performance per company 
+WITH CampaignCTR AS (
+    SELECT
+        F.Campaign_Key,
+        C.Company,
+        (F.Clicks * 1.0 / NULLIF(F.Impressions, 0)) AS CTR,
+        RANK() OVER(PARTITION BY C.Company ORDER BY (F.Clicks * 1.0 / NULLIF(F.Impressions, 0)) DESC) AS CTR_Rank
+    FROM fact_campaign_performance F
+    JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+)
+SELECT *
+FROM CampaignCTR
+WHERE CTR_Rank = 1;
+
+
+
+--Running total of spend per company 
+SELECT
+    C.Company,
+    F.DateKey,
+    F.Acquisition_Cost,
+    SUM(F.Acquisition_Cost) OVER(PARTITION BY C.Company ORDER BY F.DateKey) AS Running_Spend
+FROM fact_campaign_performance F
+JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+ORDER BY C.Company, F.DateKey;
+
+
+
+--Compare each campaign ROI to overall average ROI 
+SELECT
+    Campaign_Key,
+    ROI,
+    (SELECT AVG(ROI) FROM fact_campaign_performance) AS Global_Avg_ROI,
+    ROI - (SELECT AVG(ROI) FROM fact_campaign_performance) AS ROI_Difference
+FROM fact_campaign_performance;
+
+
+--Identify outlier CTR values using Z-score 
+WITH CTR_Data AS (
+    SELECT
+        Campaign_Key,
+        (Clicks * 1.0 / NULLIF(Impressions, 0)) AS CTR
+    FROM fact_campaign_performance
+),
+Stats AS (
+    SELECT
+        AVG(CTR) AS MeanCTR,
+        STDEV(CTR) AS StdCTR
+    FROM CTR_Data
+)
+SELECT 
+    D.Campaign_Key,
+    D.CTR,
+    (D.CTR - S.MeanCTR) / NULLIF(S.StdCTR, 0) AS Z_Score
+FROM CTR_Data D CROSS JOIN Stats S
+WHERE ABS((D.CTR - S.MeanCTR) / NULLIF(S.StdCTR, 0)) > 2;  -- outliers
+
+
+--Top 3 performing audiences by average conversion rate 
+SELECT 
+    C.Target_Audience,
+    AVG(F.Conversion_Rate) AS Avg_Conv,
+    DENSE_RANK() OVER(ORDER BY AVG(F.Conversion_Rate) DESC) AS Audience_Rank
+FROM fact_campaign_performance F
+JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+GROUP BY C.Target_Audience
+HAVING AVG(F.Conversion_Rate) IS NOT NULL;
+
+
+
+-- Calculated Fields
+SELECT TOP 10 
+*,
+	Clicks*1.0 / Impressions AS CTR, --Click Through Rate
+	Acquisition_Cost / (Clicks * Conversion_Rate) AS CPA, --Cost Per Action
+	Clicks * Conversion_Rate AS  Conversion_Count, -- Conversion Count
+	Engagement_Score*1.0 / Impressions AS Engagement_Rate --Engagement Rate
+FROM fact_campaign_performance;
+
+-- Count total rows + check missing values 
+SELECT 
+    COUNT(*) AS TotalRows,
+    SUM(CASE WHEN Clicks IS NULL THEN 1 END) AS Null_Clicks,
+    SUM(CASE WHEN Impressions IS NULL THEN 1 END) AS Null_Impressions,
+    SUM(CASE WHEN Conversion_Rate IS NULL THEN 1 END) AS Null_ConversionRate
+FROM fact_campaign_performance;
+
+
+-- Summary statistics for numeric fields 
+SELECT 
+    AVG(Clicks) AS Avg_Clicks,
+    MIN(Clicks) AS Min_Clicks,
+    MAX(Clicks) AS Max_Clicks,
+    AVG(Impressions) AS Avg_Impressions,
+    AVG(Conversion_Rate) AS Avg_ConversionRate
+FROM fact_campaign_performance;
+
+
+-- Campaign count per company 
+SELECT C.Company, COUNT(*) AS TotalCampaigns
+FROM fact_campaign_performance F
+JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+GROUP BY C.Company
+ORDER BY TotalCampaigns DESC;
+
+
+-- Top 10 highest-ROI campaigns 
+SELECT TOP 10 Campaign_Key, ROI
+FROM fact_campaign_performance
+ORDER BY ROI DESC;
+
+
+-- CTR distribution (Click Through Rate) 
+SELECT 
+    Clicks * 1.0 / NULLIF(Impressions, 0) AS CTR
+FROM fact_campaign_performance
+WHERE Impressions > 0;
+
+
+--Average CPA (Cost Per Action) 
+SELECT 
+    AVG(Acquisition_Cost / NULLIF(Clicks * Conversion_Rate, 0)) AS Avg_CPA
+FROM fact_campaign_performance;
+
+
+--Engagement Score by Channel 
+SELECT 
+    C.Channel_Used,
+    AVG(F.Engagement_Score) AS Avg_Engagement
+FROM fact_campaign_performance F
+JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+GROUP BY C.Channel_Used
+ORDER BY Avg_Engagement DESC;
+
+
+-- Conversion Rate by Target Audience 
+SELECT 
+    C.Target_Audience,
+    AVG(F.Conversion_Rate) AS Avg_ConversionRate
+FROM fact_campaign_performance F
+JOIN dim_campaign C ON F.Campaign_Key = C.Campaign_Key
+GROUP BY C.Target_Audience
+ORDER BY Avg_ConversionRate DESC;
+
+
+-- Outlier Detection
+SELECT *
+FROM fact_campaign_performance
+WHERE Clicks > (SELECT AVG(Clicks) + 3 * STDEV(Clicks) FROM fact_campaign_performance)
+   OR Impressions > (SELECT AVG(Impressions) + 3 * STDEV(Impressions) FROM fact_campaign_performance);
+
+
+ --Click-to-Impression Ratio 
+SELECT 
+    AVG(Clicks * 1.0 / NULLIF(Impressions, 0)) AS Avg_ClickToImpressionRatio
+FROM fact_campaign_performance;
