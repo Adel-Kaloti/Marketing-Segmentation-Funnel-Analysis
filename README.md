@@ -3,10 +3,17 @@
 </p>
 
 ###   <h1 align="center">Marketing Segmentation & Funnel Analysis</h1>   
-Data-driven marketing project analyzing campaign performance, audience segments, and funnel KPIs using SQL Server &amp; Tableau.
 
-<img width="1402" height="936" alt="image" src="https://github.com/user-attachments/assets/2923cdb4-8fb9-4bae-a77e-9d352a64b212" />
+# Executive Summary
 
+<img width="2400" height="1601" alt="Screenshot 2025-12-04 232246" src="https://github.com/user-attachments/assets/cdf3f15f-5865-48b5-93e1-92a624bcb90f" />
+
+
+<p align="center">
+  <a href="https://public.tableau.com/app/profile/adel.kaloti1" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Interactive Dashboard on%20Tableau-006699?style=for-the-badge&logo=tableau&logoColor=white"/>
+  </a>
+</p>
 
 -----
 
@@ -206,6 +213,7 @@ Documenting the dimensions ensures a clear understanding of each campaign’s at
   </tr>
 
 
+<img width="602" height="701" alt="Screenshot 2025-12-04 225326" src="https://github.com/user-attachments/assets/a5972385-0692-48a8-b787-aa84dc313570" />
 
   
 
