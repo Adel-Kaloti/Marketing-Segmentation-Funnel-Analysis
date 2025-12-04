@@ -274,13 +274,93 @@ Documenting the dimensions ensures a clear understanding of each campaign’s at
 - The matrix clearly shows that **performance is not uniform**: each audience has 1–2 “hero channels”, so optimizing budgets by **Audience × Channel** (instead of one-size-fits-all) can unlock additional conversions.
 
 
+# 📍 ROI by Location
+
+<p align="center">
+
+<img width="600" height="400" alt="Screenshot 2025-12-04 225319" src="https://github.com/user-attachments/assets/76c0f247-429b-43a4-93e2-fda6d71470cb" />
+  </p>
+
+### 🎯Insights
+
+- **Los Angeles and New York lead the map**, with ROI of **4.8%** and **4.5%** – these cities generate the strongest return per dollar spent and should keep or even receive extra budget.
+- **Chicago is mid-tier at 3.5% ROI**, performing positively but not at the same efficiency level as the top two markets.
+- **Miami (1.5%) and Houston (0.5%) are clear under-performers**, indicating either higher acquisition costs, weaker conversion rates, or both.
+- Reallocating part of the spend from **Miami & Houston → LA & New York** (and testing new creative / targeting in low-ROI cities) is a direct opportunity to improve overall profitability.
 
 
 
 
+#  🔻 Conversion Funnel – From Impressions to Conversions
 
+<p align="center">
+  
+<img width="300" height="600" alt="Screenshot 2025-12-04 225251" src="https://github.com/user-attachments/assets/7d6d7d9a-18d4-4c5b-b0fe-98b78ebe2c91" />
+  </p>
 
+### 🎯Insights
 
+- **Top of funnel:** `863.42M` impressions generated overall awareness.
+- **Engagement drop (CTR):** Only `73.39M` clicks, which is ~`8.5%` Click-Through Rate. There is a large audience seeing ads but not engaging.
+- **Bottom of funnel (Conversions):** Just `4.71M` conversions:
+  - ~`6.4%` of clicks convert.
+  - Only ~`0.55%` of total impressions turn into conversions.
+
+**Takeaways & Actions**
+
+- The **biggest loss** happens between **Impressions → Clicks** → test new creatives, clearer CTAs, and better audience targeting to lift CTR.
+- The **Clicks → Conversions** step is still relatively efficient but has room to improve via:
+  - faster landing pages,
+  - simplified forms/checkout,
+  - more aligned ad–landing page messaging.
+- Even a **+1–2% improvement in CTR or post-click conversion rate** would translate into **hundreds of thousands of additional conversions** given the large impression volume.
+
+---------
+### 📌 Stakeholder Recommendations – Conversion Funnel
+
+1. **Increase Engagement at the Top of the Funnel (CMO / Marketing Leads)**
+   - Prioritize A/B tests on **creative, copy, and CTAs** to lift CTR from ~8.5%.
+   - Tighten **audience targeting** (age, channel, interest) to reduce wasted impressions.
+   - Shift budget from low-engagement segments to channels/audiences with proven higher CTR.
+
+2. **Optimize the Post-Click Experience (Product & UX Teams)**
+   - Simplify landing pages: **fewer fields, clearer offer, single primary CTA**.
+   - Improve **page speed** and mobile responsiveness to avoid drop-offs.
+   - Align **ad promise ↔ landing content** so users see exactly what they clicked for.
+
+3. **Strengthen Conversion Funnel Measurement (Analytics / Data Team)**
+   - Implement consistent **tracking for each funnel step** (impression → click → key action).
+   - Monitor **CTR, CVR, and CPA** by channel and audience weekly with automated dashboards.
+   - Flag **anomalies** (sudden drops in CTR or spikes in CPA) for rapid investigation.
+
+4. **Reallocate Media Budget to High-Yield Segments (Finance & Media Planning)**
+   - Use CPA and ROI metrics to **move spend away from underperforming channels**.
+   - Increase investment in channels/audiences with **higher conversion density** and better ROI.
+   - Set **quarterly targets** for improving overall funnel efficiency (e.g., +0.1 pp lift in overall conversion rate).
+
+5. **Test & Learn Roadmap (All Stakeholders)**
+   - Define a clear **experimentation backlog**: creatives, landing variants, audience splits.
+   - Run **small controlled experiments** before scaling budget changes.
+   - Review results in a **monthly funnel performance meeting** to align business, marketing, and product decisions.
+
+--------
+### 🧰 Tools Kit
+
+<p align="center">
+  <img src="tools.png" width="600" />
+</p>
+
+<p align="center">
+  <!-- Tableau button -->
+  <a href="https://public.tableau.com/app/profile/adel.kaloti1" target="_blank">
+    <img src="https://img.shields.io/badge/View%20on%20Tableau-006699?style=for-the-badge&logo=tableau&logoColor=white" />
+  </a>
+
+  <!-- SQL file button -->
+  <a href="EDA_SQL.txt">
+    <img src="https://img.shields.io/badge/View%20SQL%20File-ff9933?style=for-the-badge&logo=database&logoColor=white" />
+  </a>
+</p>
 
 
 
