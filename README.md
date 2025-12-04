@@ -316,32 +316,30 @@ Documenting the dimensions ensures a clear understanding of each campaign’s at
 - Even a **+1–2% improvement in CTR or post-click conversion rate** would translate into **hundreds of thousands of additional conversions** given the large impression volume.
 
 ---------
-### 📌 Stakeholder Recommendations – Conversion Funnel
+# 🤝 Stakeholder Recommendations (Project-Level)
 
-1. **Increase Engagement at the Top of the Funnel (CMO / Marketing Leads)**
-   - Prioritize A/B tests on **creative, copy, and CTAs** to lift CTR from ~8.5%.
-   - Tighten **audience targeting** (age, channel, interest) to reduce wasted impressions.
-   - Shift budget from low-engagement segments to channels/audiences with proven higher CTR.
+1. **Reallocate budget to high-value audiences**  
+   Cut spend on **Men 18–24** (highest CPA ≈ $4.7K) and shift budget toward  
+   **Women 35–44, Men 25–34 and “All Ages”** segments where CPA is closer to **$0.8–2K**.
 
-2. **Optimize the Post-Click Experience (Product & UX Teams)**
-   - Simplify landing pages: **fewer fields, clearer offer, single primary CTA**.
-   - Improve **page speed** and mobile responsiveness to avoid drop-offs.
-   - Align **ad promise ↔ landing content** so users see exactly what they clicked for.
+2. **Prioritize top-performing channels**  
+   Use **YouTube and Google Ads as primary acquisition channels**, supported by  
+   **Instagram** for key segments. Limit prospecting spend on **Website & Email**  
+   and keep them mainly for nurturing/retention.
 
-3. **Strengthen Conversion Funnel Measurement (Analytics / Data Team)**
-   - Implement consistent **tracking for each funnel step** (impression → click → key action).
-   - Monitor **CTR, CVR, and CPA** by channel and audience weekly with automated dashboards.
-   - Flag **anomalies** (sudden drops in CTR or spikes in CPA) for rapid investigation.
+3. **Focus on profitable locations**  
+   Maintain or increase investment in **Los Angeles and New York** (ROI ≈ 4.5–4.8%)  
+   and gradually reduce spend in **Houston and Miami** unless there is a strategic reason.
 
-4. **Reallocate Media Budget to High-Yield Segments (Finance & Media Planning)**
-   - Use CPA and ROI metrics to **move spend away from underperforming channels**.
-   - Increase investment in channels/audiences with **higher conversion density** and better ROI.
-   - Set **quarterly targets** for improving overall funnel efficiency (e.g., +0.1 pp lift in overall conversion rate).
+4. **Tighten the conversion funnel**  
+   The big drop from **Impressions → Clicks → Conversions** indicates friction.  
+   Run continuous A/B tests on **creatives (CTR)** and **landing pages (CVR)** with a target  
+   of **+10–15% improvement in click-through and conversion rates**.
 
-5. **Test & Learn Roadmap (All Stakeholders)**
-   - Define a clear **experimentation backlog**: creatives, landing variants, audience splits.
-   - Run **small controlled experiments** before scaling budget changes.
-   - Review results in a **monthly funnel performance meeting** to align business, marketing, and product decisions.
+5. **Make the dashboard a decision ritual**  
+   Use this Tableau dashboard in a **monthly performance review** to decide  
+   which audiences, channels and locations get **more budget, less budget, or new tests**,  
+   with **CPA and ROI** as the primary decision metrics.
 
 --------
 ### 🧰 Tools Kit
