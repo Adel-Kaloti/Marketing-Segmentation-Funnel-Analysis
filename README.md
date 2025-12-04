@@ -212,10 +212,71 @@ Documenting the dimensions ensures a clear understanding of each campaign’s at
 
   </tr>
 
+---
 
-<img width="602" height="701" alt="Screenshot 2025-12-04 225326" src="https://github.com/user-attachments/assets/a5972385-0692-48a8-b787-aa84dc313570" />
+# CPA by Target Audience
 
+<p align="center">
+<img width="400" height="400" alt="Screenshot 2025-12-04 225326" src="https://github.com/user-attachments/assets/a5972385-0692-48a8-b787-aa84dc313570" />
+  </p>
   
+### 🎯Insights
+
+- **Men 18–24 are the most expensive segment**, with an average CPA of **$4.7K**, almost **3x higher** than the overall “All Ages” benchmark (~$1.7K).
+- **Women 35–44 are the most cost-efficient audience**, with an average CPA of only **$0.8K**, making them a strong candidate for budget scaling.
+- **Men 25–34 also perform efficiently** at around **$1.0K CPA**, staying below the overall average and offering a cheaper alternative to Men 18–24.
+- **Women 25–34 sit in the middle** (~**$2.3K CPA**), suggesting that performance is acceptable but less efficient than older women or Men 25–34.
+
+----
+
+
+# 📈 CTR & Conversion Rate over Time
+
+<p align="center">
+<img width="800" height="400" alt="Screenshot 2025-12-04 225311" src="https://github.com/user-attachments/assets/0189b13e-4868-46ef-a3f1-742e4ebcf935" />
+  </p>
+  
+### 🎯Insights
+
+- **CTR is consistently strong** throughout the year, fluctuating in a narrow band between **11.7%–12.3%**, which indicates stable ad relevance and engagement.
+- **Mid-year spike in July** shows the **highest CTR at ~12.3%**, suggesting a particularly successful campaign or creative during that period.
+- **Conversion rate starts and ends strong** (≈**5.4% in Jan** and **5.4% in Nov**), with a softer period in the middle of the year, hinting that later optimizations helped recover efficiency.
+- The **gap between CTR and conversion rate widens mid-year**, implying that while people still clicked, fewer completed actions — a signal to review landing pages, offers, or audience targeting for those months.
+
+-------
+
+# 🖱️ Share of Clicks by Channel
+
+<p align="center">
+<img width="400" height="400" alt="Screenshot 2025-12-04 225302" src="https://github.com/user-attachments/assets/b26da461-b0f0-4d07-87d9-46236552bd1a" />
+  </p>
+
+### 🎯Insights
+
+- **YouTube is the top traffic driver**, capturing **27.3% of all clicks**, followed by **Google Ads (23.7%)** and **Instagram (21.0%)** — together these three channels generate **over 70% of total clicks**.
+- **Social & video platforms dominate** (YouTube, Instagram, Facebook) compared to owned/low-intent channels (Website, Email), confirming that discovery and scroll-based environments are the primary click source.
+- **Website (6.4%) and Email (9.2%) contribute a smaller share**, but can still be valuable as higher-intent channels — good candidates for nurturing and retargeting users initially acquired via YouTube and Google Ads.
+
+-----
+
+
+# 🎯 Audience × Channel Performance
+
+<p align="center">
+<img width="1000" height="450" alt="Screenshot 2025-12-04 225333" src="https://github.com/user-attachments/assets/2e73eeb1-5a96-475d-87ed-adf135e08f08" />
+  </p>
+
+### 🎯Insights
+
+- **Women 35–44 are the strongest segment overall**, especially on **YouTube (538K conv)** and **Google Ads (460K conv)** — these cells are the darkest on the heatmap and should be top priority for budget allocation.
+- **Men 25–34 also perform very well on Google Ads and Instagram** (≈379K and 322K conversions), making them a solid secondary segment for performance campaigns.
+- **Email and Website are consistently weaker across all audiences**, suggesting they work better as support / retargeting channels rather than primary acquisition drivers.
+- The matrix clearly shows that **performance is not uniform**: each audience has 1–2 “hero channels”, so optimizing budgets by **Audience × Channel** (instead of one-size-fits-all) can unlock additional conversions.
+
+
+
+
+
 
 
 
