@@ -316,7 +316,7 @@ Documenting the dimensions ensures a clear understanding of each campaign’s at
 - Even a **+1–2% improvement in CTR or post-click conversion rate** would translate into **hundreds of thousands of additional conversions** given the large impression volume.
 
 ---------
-# 🤝 Stakeholder Recommendations (Project-Level)
+# 🤝 Stakeholder Recommendations
 
 1. **Reallocate budget to high-value audiences**  
    Cut spend on **Men 18–24** (highest CPA ≈ $4.7K) and shift budget toward  
