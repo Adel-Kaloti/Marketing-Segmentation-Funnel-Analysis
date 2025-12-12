@@ -6,6 +6,8 @@
 
 # Executive Summary
 
+Full marketing analytics pipeline using SQL Server and Tableau to analyze campaigns performance, audience segments, channels and funnel KPIs (CTR, conversion rate, CPA, ROI), funnel benchmarks (863.4M impressions, 73.4M clicks, 4.7M conversions) and showed that Youtube and women aged 35–44 in Los Angeles are the most profitable segments.
+
 <img width="2400" height="1601" alt="Screenshot 2025-12-04 232246" src="https://github.com/user-attachments/assets/cdf3f15f-5865-48b5-93e1-92a624bcb90f" />
 
 
